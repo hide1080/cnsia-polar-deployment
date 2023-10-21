@@ -1,4 +1,5 @@
 include('../../../../cnsia-config-service/Tiltfile')
+include('../../../../cnsia-edge-service/Tiltfile')
 include('../../../../cnsia-order-service/Tiltfile')
 include('../../../../cnsia-catalog-service/Tiltfile')
 
