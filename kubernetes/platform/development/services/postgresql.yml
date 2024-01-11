@@ -27,27 +27,27 @@ spec:
         db: polar-postgres
     spec:
       containers:
-      - name: polar-postgres
-        image: postgres:15.4
-        env:
-        - name: POSTGRES_USER
-          value: user
-        - name: POSTGRES_PASSWORD
-          value: password 
-        resources:
-          requests:
-            cpu: 100m
-            memory: 60Mi
-          limits:
-            cpu: 200m
-            memory: 120Mi
-        volumeMounts:
-          - mountPath: /docker-entrypoint-initdb.d
-            name: postgres-config-volume
+        - name: polar-postgres
+          image: postgres:15.4
+          env:
+            - name: POSTGRES_USER
+              value: user
+            - name: POSTGRES_PASSWORD
+              value: password
+          resources:
+            requests:
+              cpu: 100m
+              memory: 60Mi
+            limits:
+              cpu: 200m
+              memory: 120Mi
+          volumeMounts:
+            - mountPath: /docker-entrypoint-initdb.d
+              name: postgres-config-volume
       volumes:
-      - name: postgres-config-volume
-        configMap:
-          name: postgres-config
+        - name: postgres-config-volume
+          configMap:
+            name: postgres-config
 
 ---
 
@@ -62,6 +62,6 @@ spec:
   selector:
     db: polar-postgres
   ports:
-  - protocol: TCP
-    port: 5432
-    targetPort: 5432
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
