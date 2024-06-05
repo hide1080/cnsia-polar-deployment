@@ -7,21 +7,21 @@ resources:
 # patchesStrategicMerge:
 #   - patch-env.yml
 patches:
-  - path: patch-env.yml
-  - path: patch-resources.yml
-  - path: patch-volumes.yml
+- path: patch-env.yml
+- path: patch-resources.yml
+- path: patch-volumes.yml
 
 configMapGenerator:
-  - behavior: merge
-    files:
-      - application-prod.yml
-    name: catalog-config
+- behavior: merge
+  files:
+  - application-prod.yml
+  name: catalog-config
 
 images:
-  - name: catalog-service
-    newName: ghcr.io/hide1080/catalog-service
-    newTag: 818ceeb79fac7ceab046197eb9bceef75e928363
+- name: catalog-service
+  newName: ghcr.io/hide1080/catalog-service
+  newTag: ca460fa104d9e23332645fb40aadeccf0304c550
 
 replicas:
-  - name: catalog-service
-    count: 2
+- count: 2
+  name: catalog-service
