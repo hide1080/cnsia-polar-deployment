@@ -18,7 +18,7 @@ configMapGenerator:
 images:
 - name: dispatcher-service
   newName: ghcr.io/hide1080/dispatcher-service
-  newTag: latest
+  newTag: 1e47320eaba6df2db690173ae84d74d8eb15b4f4
 
 replicas:
 - count: 1
