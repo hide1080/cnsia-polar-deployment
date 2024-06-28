@@ -18,7 +18,7 @@ configMapGenerator:
 images:
 - name: order-service
   newName: ghcr.io/hide1080/order-service
-  newTag: c35fdbd8912fec0c3083e34a60cc28a55a7cf004
+  newTag: 778fb2dda0a3a2b04606d27345343508aa87d907
 
 replicas:
 - count: 1
