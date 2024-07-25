@@ -1,2 +1,2 @@
 # cnsia-polar-deployment
-「Cloud Native Spring in Action」の読書記録。デプロイメント関連のスクリプト
+書籍「Cloud Native Spring in Action」の polar-deployment
