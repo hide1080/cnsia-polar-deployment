@@ -20,7 +20,7 @@ configMapGenerator:
 images:
 - name: catalog-service
   newName: ghcr.io/hide1080/catalog-service
-  newTag: ca460fa104d9e23332645fb40aadeccf0304c550
+  newTag: 80af98a592781fd0c16d7d7d95b18dd5a845ba78
 
 replicas:
 - count: 2
